@@ -14,7 +14,7 @@ page.on("console", (message) => {
 page.on("pageerror", (error) => errors.push(error.message));
 
 await page.goto(url, { waitUntil: "networkidle" });
-await page.waitForTimeout(1400);
+await page.waitForTimeout(4200);
 await page.screenshot({ path: output });
 
 const result = await page.evaluate(() => {

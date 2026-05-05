@@ -17,7 +17,7 @@ Most portfolio repos prove data plumbing or framework use. This one proves craft
 - Anchor/grommet profile with sagging cloth spans
 - Pointer raycasting and drag-plane interaction
 - Dynamic lighting and ambient wind
-- Runtime canvas texture generation for silk grain, hems, grommets, logo, and typography
+- Runtime canvas texture generation for silk grain, hems, grommets, procedural mark, and typography
 
 ## Run Locally
 
@@ -55,11 +55,9 @@ npm run record:demo -- http://127.0.0.1:5179/ docs/drag-demo.webm
 
 - `src/main.js` - simulation, rendering, interaction, texture generation
 - `src/styles.css` - full-viewport presentation layer
-- `assets/mccullough-digital-logo.png` - source copy of the McCullough Digital brand asset
-- `public/assets/mccullough-digital-logo.png` - deployable copy used by the built demo
 - `docs/engineering-notes.md` - implementation notes and boundaries
 - `docs/desktop-smoke.png` and `docs/mobile-smoke.png` - browser verification captures
 
 ## Framing
 
-This is a focused frontend systems artifact, not a general-purpose physics engine. It is meant to show how a visual idea can be carried through math, rendering, input handling, and tuning until it becomes a polished client-facing interaction.
+This is a focused frontend systems artifact, not a general-purpose physics engine. It is meant to show how a visual idea can be carried through math, rendering, input handling, and tuning until it becomes a polished portfolio interaction.

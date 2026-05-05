@@ -21,9 +21,9 @@ The banner texture is generated at runtime with a 4096x2048 canvas:
 - subtle vertical silk grain
 - stitched top and bottom hems
 - grommet rings aligned to the physics anchor profile
-- McCullough Digital logo and label text
+- a procedural ribbon mark and label text
 
-The included logo is a McCullough Digital brand asset. Replace `assets/mccullough-digital-logo.png` if you adapt the demo for another brand.
+The mark is generated directly on the texture canvas so the demo does not depend on external image assets.
 
 ## What This Demonstrates
 
@@ -34,7 +34,7 @@ This is not meant to be a generic cloth engine. It is a focused interaction stud
 - constraint-based simulation
 - procedural texture generation
 - pointer-driven interaction
-- visual tuning for a client-facing hero surface
+- visual tuning for a portfolio hero surface
 
 ## Known Limits
 

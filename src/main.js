@@ -94,7 +94,7 @@ function createBannerTexture() {
   texture.wrapS = THREE.ClampToEdgeWrapping;
   texture.wrapT = THREE.ClampToEdgeWrapping;
 
-  const draw = (logo = null) => {
+  const draw = () => {
     const { width, height } = textureCanvas;
     const cx = width / 2;
     const cy = height / 2;
@@ -133,22 +133,18 @@ function createBannerTexture() {
     ctx.shadowBlur = 70;
     ctx.shadowOffsetY = 16;
 
-    if (logo) {
-      const logoWidth = 380;
-      const logoHeight = 330;
-      ctx.drawImage(logo, cx - logoWidth / 2, cy - logoHeight / 2 - 190, logoWidth, logoHeight);
-    }
+    drawProceduralMark(ctx, cx, cy - 205);
 
     ctx.textAlign = "center";
     ctx.fillStyle = "#ffffff";
     ctx.font = "900 178px Segoe UI, sans-serif";
-    ctx.fillText("McCULLOUGH DIGITAL", cx, cy + 154);
+    ctx.fillText("CLOTH PHYSICS", cx, cy + 154);
 
     ctx.shadowBlur = 38;
     ctx.shadowColor = "rgba(33, 231, 255, 0.55)";
     ctx.fillStyle = "#4eeaff";
     ctx.font = "800 48px Segoe UI, sans-serif";
-    drawTrackedText(ctx, "INTERACTIVE FRONTEND SYSTEMS", cx, cy + 304, 12);
+    drawTrackedText(ctx, "VERLET CONSTRAINT STUDY", cx, cy + 304, 12);
 
     ctx.strokeStyle = "#ffb13d";
     ctx.lineWidth = 5;
@@ -165,12 +161,41 @@ function createBannerTexture() {
 
   draw();
 
-  const logo = new Image();
-  logo.src = `${import.meta.env.BASE_URL}assets/mccullough-digital-logo.png`;
-  logo.onload = () => draw(logo);
-  logo.onerror = () => draw();
-
   return texture;
+}
+
+function drawProceduralMark(ctx, x, y) {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.strokeStyle = "rgba(238, 247, 255, 0.86)";
+  ctx.fillStyle = "rgba(238, 247, 255, 0.11)";
+  ctx.lineWidth = 16;
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  ctx.shadowBlur = 34;
+  ctx.shadowColor = "rgba(46, 232, 255, 0.35)";
+
+  ctx.beginPath();
+  ctx.moveTo(-150, 20);
+  ctx.bezierCurveTo(-110, -80, -48, 94, 0, -10);
+  ctx.bezierCurveTo(42, -98, 112, 52, 154, -34);
+  ctx.stroke();
+
+  ctx.lineWidth = 10;
+  ctx.strokeStyle = "rgba(255, 177, 61, 0.88)";
+  ctx.beginPath();
+  ctx.moveTo(-122, 54);
+  ctx.bezierCurveTo(-54, 12, 44, 92, 126, 30);
+  ctx.stroke();
+
+  ctx.fillStyle = "rgba(46, 232, 255, 0.72)";
+  [-150, 0, 154].forEach((dotX) => {
+    ctx.beginPath();
+    ctx.arc(dotX, dotX === 0 ? -10 : 20, 13, 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  ctx.restore();
 }
 
 function drawHem(ctx, width, height) {
