@@ -1,0 +1,20 @@
+{
+  "name": "cloth-physics-banner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "smoke:visual": "node scripts/visual-smoke.mjs",
+    "record:demo": "node scripts/record-demo.mjs"
+  },
+  "dependencies": {
+    "three": "^0.164.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1",
+    "vite": "^8.0.10"
+  }
+}

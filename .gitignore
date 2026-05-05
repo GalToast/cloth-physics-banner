@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.vite/
+*.log
+*.tmp
+coverage/
+playwright-report/
+test-results/
+docs/videos/
+docs/*-preview.png

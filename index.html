@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive WebGL cloth banner built with a custom Verlet particle grid, constraint solver, and runtime-generated silk texture."
+    />
+    <title>Cloth Physics Banner</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="stage" aria-label="Interactive cloth physics demo">
+      <canvas id="cloth-canvas" aria-label="Draggable cloth simulation"></canvas>
+      <section class="copy" aria-hidden="true">
+        <p class="eyebrow">WebGL cloth study</p>
+        <h1>Interactive silk banner</h1>
+      </section>
+      <div class="hint" aria-hidden="true">
+        <span></span>
+        Drag the banner
+        <span></span>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
