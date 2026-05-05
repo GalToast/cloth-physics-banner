@@ -8,3 +8,4 @@ playwright-report/
 test-results/
 docs/videos/
 docs/*-preview.png
+docs/live-*.png
