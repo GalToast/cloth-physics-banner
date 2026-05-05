@@ -55,7 +55,8 @@ npm run record:demo -- http://127.0.0.1:5179/ docs/drag-demo.webm
 
 - `src/main.js` - simulation, rendering, interaction, texture generation
 - `src/styles.css` - full-viewport presentation layer
-- `assets/mccullough-digital-logo.png` - McCullough Digital brand asset
+- `assets/mccullough-digital-logo.png` - source copy of the McCullough Digital brand asset
+- `public/assets/mccullough-digital-logo.png` - deployable copy used by the built demo
 - `docs/engineering-notes.md` - implementation notes and boundaries
 - `docs/desktop-smoke.png` and `docs/mobile-smoke.png` - browser verification captures
 

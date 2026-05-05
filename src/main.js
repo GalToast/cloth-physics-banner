@@ -166,7 +166,7 @@ function createBannerTexture() {
   draw();
 
   const logo = new Image();
-  logo.src = "/assets/mccullough-digital-logo.png";
+  logo.src = `${import.meta.env.BASE_URL}assets/mccullough-digital-logo.png`;
   logo.onload = () => draw(logo);
   logo.onerror = () => draw();
 
